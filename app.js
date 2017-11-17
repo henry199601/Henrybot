@@ -334,7 +334,7 @@ request.on('response', function(response) {
 		if(result){
 			const fulfillment = result.fulfillment;
 			if(fulfillment && fulfillment.speech && fulfillment.speech.length){
-				sendTextMessage(senderID,fulfillment,speech);
+				sendTextMessage(senderID,fulfillment.speech);
 	}}}});
 
 request.on('error', function(error) {
