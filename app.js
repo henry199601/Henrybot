@@ -329,7 +329,12 @@ function sendToBot(senderID,Message){
 
 request.on('response', function(response) {
     console.log(response);
-});
+	if(response){
+		if(result){
+			const fulfilments = result.fulfilments;
+			if(fulfilments && fulfilments.speech && fulfilments.speech.length){
+				sendTextMessage(senderID,fulfilments,speech);
+	}}}});
 
 request.on('error', function(error) {
     console.log(error);
