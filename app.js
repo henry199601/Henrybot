@@ -350,7 +350,7 @@ request.on('response', function(response) {
 			break;
 			default;
 			console.log('unknown action...');
-			break;
+		break;}
 	}
 	}}});
 
