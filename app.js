@@ -332,9 +332,9 @@ request.on('response', function(response) {
 	if(response){
 		const result = response.result;
 		if(result){
-			const fulfilments = result.fulfilments;
-			if(fulfilments && fulfilments.speech && fulfilments.speech.length){
-				sendTextMessage(senderID,fulfilments,speech);
+			const fulfillment = result.fulfillment;
+			if(fulfillment && fulfillment.speech && fulfillment.speech.length){
+				sendTextMessage(senderID,fulfillment,speech);
 	}}}});
 
 request.on('error', function(error) {
