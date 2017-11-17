@@ -352,7 +352,7 @@ request.on('response', function(response) {
 			console.log('unknown action...');
 		break;}
 	}
-	}}});
+}}});
 
 request.on('error', function(error) {
     console.log(error);
