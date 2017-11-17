@@ -330,6 +330,7 @@ function sendToBot(senderID,Message){
 request.on('response', function(response) {
     console.log(response);
 	if(response){
+		const result = response.result;
 		if(result){
 			const fulfilments = result.fulfilments;
 			if(fulfilments && fulfilments.speech && fulfilments.speech.length){
