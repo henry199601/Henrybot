@@ -323,7 +323,7 @@ function handleMessage(currentUser, senderID, message, isEcho, messageId, appId,
   }
 }
 function sendToBot(senderID,Message){
-	var request = app.textRequest('<Your text query>', {
+	var request = bot.textRequest('<Your text query>', {
     sessionId: '<unique session id>'
 });
 
