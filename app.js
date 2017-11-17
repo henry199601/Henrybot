@@ -314,12 +314,28 @@ function handleMessage(currentUser, senderID, message, isEcho, messageId, appId,
       getUsername(senderID);
     }
     else {
-      sendTextMessage(senderID, messageText);
+      //sendTextMessage(senderID, messageText);
+	  sendToBot(senderID,messageText);
     }
   }
   else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
   }
+}
+function sendToBot(senderID,Message){
+	var request = app.textRequest('<Your text query>', {
+    sessionId: '<unique session id>'
+});
+
+request.on('response', function(response) {
+    console.log(response);
+});
+
+request.on('error', function(error) {
+    console.log(error);
+});
+
+request.end();
 }
 
 function showMenu(senderID) {
